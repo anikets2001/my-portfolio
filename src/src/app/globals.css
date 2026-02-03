@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* Class-based dark mode so theme toggle works (Tailwind v4 defaults to prefers-color-scheme) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #135bec;
+  --color-accent-teal: #2dd4bf;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #0f172a;
+  --color-charcoal: #1e293b;
+  --font-display: Inter, ui-sans-serif, system-ui, sans-serif;
+  --radius: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 dark:bg-white/5 backdrop-blur-lg border border-slate-200 dark:border-white/10 shadow-xl;
+  }
+  .section-container {
+    @apply max-w-[1100px] mx-auto px-6 md:px-10 py-20;
+  }
+}
