@@ -49,7 +49,7 @@ export default function Header({ currentPath = "/" }) {
               target="_blank"
               rel="noopener noreferrer"
               download={"Aniket-Resume.pdf"}
-              className="hidden sm:flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              className="hidden sm:flex min-w-25 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"
             >
               <span className="truncate">Download Resume</span>
             </Link>
