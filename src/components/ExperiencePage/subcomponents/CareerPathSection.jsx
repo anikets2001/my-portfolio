@@ -5,7 +5,7 @@ const EXPERIENCES = [
     iconBg: "bg-primary/20 text-primary border-primary/30",
     lineClass: "bg-gradient-to-b from-primary/30 to-slate-300 dark:to-[#324467]",
     title: "Frontend Developer",
-    period: "JUN 2022 - PRESENT",
+    period: "JUL 2025 - PRESENT",
     periodClass: "text-primary",
     company: "Yatra.com | Gurgaon, India",
     bullets: [
@@ -20,14 +20,14 @@ const EXPERIENCES = [
     icon: "history",
     iconBg: "bg-slate-200 dark:bg-[#232f48] text-slate-600 dark:text-[#92a4c9] border-slate-300 dark:border-[#324467]",
     lineClass: "bg-slate-300 dark:bg-[#324467]",
-    title: "Frontend Developer Intern",
-    period: "JAN 2022 - MAY 2022",
+    title: "Frontend Developer",
+    period: "JUN 2023 - JUN 2025",
     periodClass: "text-slate-600 dark:text-[#92a4c9]",
-    company: "IoT83 | Noida, India",
+    company: "IoT83 | Gurgaon, India",
     bullets: [
-      "Architected real-time IoT monitoring dashboards using React.js and D3.js for data visualization.",
+      "Architected real-time IoT monitoring dashboards using React.js and Typescript for data visualization.",
       "Developed reusable UI component library following atomic design principles.",
-      "Integrated WebSocket connections for live sensor data streaming with low latency.",
+      "Integrated SSE (Server Sent Events) connections for live sensor data streaming with low latency.",
     ],
     bulletIconClass: "text-slate-500 dark:text-[#324467]",
   },
@@ -35,11 +35,11 @@ const EXPERIENCES = [
 
 export default function CareerPathSection() {
   return (
-    <div>
-      <h2 className="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-6">
-        Career Path
+    <div className="min-w-0">
+      <h2 className="text-slate-900 dark:text-white text-lg sm:text-[22px] font-bold leading-tight tracking-[-0.015em] px-2 sm:px-4 pb-4 sm:pb-6">
+        Career Path (Total Experience: 2 Years 7 Months)
       </h2>
-      <div className="grid grid-cols-[40px_1fr] gap-x-6 px-4">
+      <div className="grid grid-cols-[36px_1fr] sm:grid-cols-[40px_1fr] gap-x-4 sm:gap-x-6 px-2 sm:px-4">
         {EXPERIENCES.flatMap((exp, index) => [
           <div
             key={`${exp.id}-icon`}
@@ -60,10 +60,10 @@ export default function CareerPathSection() {
           </div>,
           <div
             key={`${exp.id}-content`}
-            className="flex flex-1 flex-col pb-12 pt-1"
+            className="flex flex-1 flex-col pb-8 sm:pb-12 pt-1 min-w-0"
           >
-            <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-              <p className="text-slate-900 dark:text-white text-xl font-bold leading-normal">
+            <div className="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-2">
+              <p className="text-slate-900 dark:text-white text-base sm:text-lg md:text-xl font-bold leading-normal break-words">
                 {exp.title}
               </p>
               <p
@@ -72,12 +72,12 @@ export default function CareerPathSection() {
                 {exp.period}
               </p>
             </div>
-            <p className="text-slate-600 dark:text-[#92a4c9] text-base font-medium mb-4">
+            <p className="text-slate-600 dark:text-[#92a4c9] text-sm sm:text-base font-medium mb-3 sm:mb-4">
               {exp.company}
             </p>
-            <ul className="space-y-3 text-slate-600 dark:text-[#92a4c9] text-sm leading-relaxed list-none">
+            <ul className="space-y-2 sm:space-y-3 text-slate-600 dark:text-[#92a4c9] text-xs sm:text-sm leading-relaxed list-none break-words">
               {exp.bullets.map((bullet, i) => (
-                <li key={i} className="flex gap-2">
+                <li key={i} className="flex gap-2 min-w-0">
                   <span
                     className={`mt-0.5 material-symbols-outlined text-sm ${exp.bulletIconClass}`}
                   >

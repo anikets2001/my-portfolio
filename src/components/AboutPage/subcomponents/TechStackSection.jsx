@@ -12,26 +12,26 @@ const toolsOfTrade = [
 
 export default function TechStackSection() {
   return (
-    <section className="w-full bg-slate-200 dark:bg-slate-900 py-24 text-slate-900 dark:text-white">
+    <section className="w-full bg-slate-200 dark:bg-slate-900 py-12 sm:py-16 md:py-24 text-slate-900 dark:text-white">
       <SectionContainer>
-        <div className="flex flex-col md:flex-row gap-16">
-          <div className="md:w-1/3">
-            <h2 className="text-4xl font-black mb-6">Tech Stack Overview</h2>
-            <p className="text-slate-600 dark:text-slate-400">
+        <div className="flex flex-col md:flex-row gap-10 sm:gap-14 md:gap-16">
+          <div className="md:w-1/3 min-w-0">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4 sm:mb-6">Tech Stack Overview</h2>
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
               A curated collection of tools I use to bring ideas to life.
               Categorized by frequency and mastery.
             </p>
           </div>
-          <div className="flex-1 space-y-12">
+          <div className="flex-1 space-y-8 sm:space-y-12 min-w-0">
             <div>
               <h3 className="text-accent-teal font-bold uppercase tracking-wider text-sm mb-6 flex items-center gap-2">
                 <span className="h-px w-8 bg-accent-teal" /> Daily Drivers
               </h3>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3 sm:gap-4">
                 {dailyDrivers.map((tech) => (
                   <div
                     key={tech}
-                    className="px-6 py-3 rounded-xl bg-white/80 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center gap-3"
+                    className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-white/80 dark:bg-white/5 border border-slate-300 dark:border-white/10 flex items-center gap-2 sm:gap-3 text-sm sm:text-base"
                   >
                     <span className="font-bold">{tech}</span>
                   </div>

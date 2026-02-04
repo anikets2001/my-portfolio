@@ -26,8 +26,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={`${inter.variable} font-display antialiased bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-200 min-h-screen selection:bg-primary/30`}
-        suppressHydrationWarning
+        className={`${inter.variable} font-display antialiased bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-200 min-h-screen overflow-x-hidden selection:bg-primary/30`}
       >
         <Script id="theme-init" strategy="beforeInteractive">
           {themeScript}

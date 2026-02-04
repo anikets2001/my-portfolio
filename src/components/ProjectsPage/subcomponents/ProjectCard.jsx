@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const TAG_CLASS =
   "text-xs font-semibold px-2 py-1 rounded bg-slate-100 dark:bg-[#232f48] text-slate-700 dark:text-[#92a4c9]";
@@ -10,11 +11,10 @@ export default function ProjectCard({
   tags = [],
   imageSrc,
   imageAlt,
-  caseStudyHref = "#",
-  liveDemoHref = "#",
+  liveUrl,
 }) {
   return (
-    <div className="flex flex-col gap-4 p-5 rounded-xl border border-slate-200 dark:border-[#232f48] bg-white dark:bg-[#1a2335]/50 group">
+    <div className="flex flex-col gap-3 sm:gap-4 p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-[#232f48] bg-white dark:bg-[#1a2335]/50 group min-w-0">
       <div className="w-full aspect-video rounded-lg overflow-hidden relative bg-slate-200 dark:bg-[#232f48]">
         <Image
           src={imageSrc}
@@ -31,7 +31,7 @@ export default function ProjectCard({
       </div>
       <div className="flex flex-col gap-2">
         <div className="flex justify-between items-start">
-          <p className="text-slate-900 dark:text-white text-xl font-bold">
+          <p className="text-slate-900 dark:text-white text-lg sm:text-xl font-bold break-words">
             {title}
           </p>
           <span className="px-2 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded uppercase">
@@ -50,20 +50,16 @@ export default function ProjectCard({
         </div>
       </div>
       <div className="flex gap-3 pt-4 border-t border-slate-100 dark:border-[#232f48]">
-        <a
-          href={caseStudyHref}
-          className="flex flex-1 items-center justify-center gap-2 rounded-lg h-11 bg-primary text-white text-sm font-bold transition-all hover:brightness-110"
-        >
-          <span className="material-symbols-outlined text-sm">article</span>
-          <span className="truncate">Case Study</span>
-        </a>
-        <a
-          href={liveDemoHref}
+        <Link
+          target="_blank"
+          href={liveUrl}
           className="flex flex-1 items-center justify-center gap-2 rounded-lg h-11 bg-slate-100 dark:bg-[#232f48] text-slate-900 dark:text-white text-sm font-bold transition-all hover:bg-slate-200 dark:hover:bg-[#2d3a5a]"
         >
-          <span className="material-symbols-outlined text-sm">rocket_launch</span>
+          <span className="material-symbols-outlined text-sm">
+            rocket_launch
+          </span>
           <span className="truncate">Live Demo</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

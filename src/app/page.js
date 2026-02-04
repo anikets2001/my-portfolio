@@ -14,7 +14,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+    <div className="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden pt-[72px] sm:pt-20">
       <Header currentPath="/" />
       <main className="flex-1 flex flex-col items-center">
         <HeroSection />

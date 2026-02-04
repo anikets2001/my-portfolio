@@ -2,41 +2,35 @@ import SmallProjectCard from "./SmallProjectCard";
 
 const PERSONAL_PROJECTS = [
   {
-    id: "portfolio-v1",
+    id: "expense-tracker",
     icon: "code",
-    title: "Portfolio v1",
+    title: "Expense-Tracker Application",
     description:
-      "My first developer portfolio built using Gatsby and Framer Motion.",
-    githubHref: "#",
+      "Expense-Tracker Application build with MERN Stack (Under development).",
+    githubHref: "https://github.com/anikets2001/expense_tracker",
+    liveUrl: "https://expense-tracker-finance.vercel.app/dashboard",
   },
   {
-    id: "travel-analytics",
-    icon: "dataset",
-    title: "Travel Analytics",
+    id: "holygrims",
+    icon: "travel",
+    title: "Holygrims",
     description:
-      "A proof-of-concept dashboard visualizing global flight traffic patterns.",
-    githubHref: "#",
-  },
-  {
-    id: "seo-automator",
-    icon: "auto_fix_high",
-    title: "SEO Automator",
-    description:
-      "Micro-service for generating optimized metadata for airline routes.",
-    githubHref: "#",
+      "Travel Website for Religious places",
+    githubHref: "https://github.com/Ayodhya-tours",
+    liveUrl: null,
   },
 ];
 
 export default function PersonalProjectsSection() {
   return (
-    <div className="flex flex-col gap-6 mb-16">
+    <div className="flex flex-col gap-4 sm:gap-6 mb-10 sm:mb-16 min-w-0">
       <div className="flex flex-col gap-2">
-        <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-          Personal & Open Source
+        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white">
+          Personal
         </h3>
         <div className="h-1 w-20 bg-primary rounded-full" />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {PERSONAL_PROJECTS.map((project) => (
           <SmallProjectCard
             key={project.id}
@@ -44,6 +38,7 @@ export default function PersonalProjectsSection() {
             title={project.title}
             description={project.description}
             githubHref={project.githubHref}
+            liveUrl={project?.liveUrl}
           />
         ))}
       </div>
